@@ -1,0 +1,182 @@
+
+/* 푸터 */
+
+.footer{
+    background:  #1f3933;
+    color: #000;
+    position: relative;
+    width: 100%;
+    padding-bottom: 10px;
+    .footer-bg{
+        margin: 0 auto;
+        width: 95vw;
+        border-radius: 35px;
+        background-color: #282c32;
+        background: url(../img/green-bg2.jpg) 48% 65%;
+        padding: 0 22px;
+        .group-top{
+            padding-top: 4vw;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            .logo{
+                width: 115px;
+                @include mobile{
+                    width: 55px;
+                }
+            }
+            .link-mail{
+                width: 45px;
+                height: 45px;
+                border: 1px solid #282c32;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                .path{
+                    fill: #282c32;
+                }
+            }
+        }
+        .group-mid{
+            padding-top: 72px;
+            padding-bottom: 104px;
+            display: grid;
+            grid-auto-columns: 1fr;
+            grid-column-gap: 40px;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-template-rows: auto;
+            @include tablet{
+                grid-template-columns: 1fr 1fr;
+                grid-row-gap: 40px;
+            }
+            @include mobile{
+                padding-bottom: 30px;
+            }
+            .title{
+                font-size: 20px;
+                font-weight: 400;
+                display: inline-block;
+                margin-bottom: 24px;
+                padding-right: 86px;
+                padding-bottom: 24px;
+                border-bottom: 1px solid #282c32;
+                opacity: 0.9;
+                @include mobile{
+                    font-size: 16px;
+                    padding-bottom: 5px;
+                    padding-right: 8px;
+                }
+            }
+            .mid-list{
+                display: flex;
+                flex-direction: column;
+                .mid-item{
+                    display: block;
+                    padding-top: 0.5em;
+                    padding-bottom: 0.5em;
+                    @include mobile{
+                        font-size: 13px;
+                    }
+                }
+            }
+            .menu-area{
+                @include tablet{
+                }
+            }
+            .company-area{
+                @include tablet{
+                }
+
+            }
+            .email-area{
+                grid-row-start: span 1;
+                grid-row-end: span 1;
+                grid-column-start: span 2;
+                justify-self: end;
+                width: 430px;
+                @include tablet{
+                    justify-self: start;
+                    width: 100%;
+                }
+                .title{
+                    font-size: 20px;
+                    padding-bottom: 2px;
+                    line-height: 55px;
+                    border: none;
+                    margin-bottom: 0;
+                    @include mobile{
+                        font-size: 18px;
+                        line-height: 40px;
+                    }
+                }
+                .desc{
+                    @include mobile{
+                        padding-right: 70px;
+                        font-size: 14px;
+                    }
+                }
+                .email-box{
+                    margin-top: 46px;
+                    margin-bottom: 15px;
+                    @include mobile{
+                        margin-top: 20px;
+                    }
+                    form{
+                        border-style: solid;
+                        border-width: 1px;
+                        border-color: #fff;
+                        border-color: #000;
+                        border-radius: 150px;
+                        justify-content: space-between;
+                        display: flex;
+                        width: 100%;
+                        @include tablet{
+                            width: 40%;
+                        }
+                        @include mobile{
+                            width: 100%;
+                        }
+                        input{
+                            padding-left: 27px;
+                            background: none;
+                            width: 50%;
+                            &::placeholder{
+                                color: #fff;
+                                color: #000;
+                            }
+                        }
+                        .btn-submit{
+                            padding: 12px 27px;
+                        }
+                    }
+                }
+            }
+        }
+        .group-bottom{
+            padding-bottom:20px;
+            display: flex;
+            justify-content: space-between;
+            line-height: 140%;
+            flex-wrap: wrap;
+            @include mobile{
+                padding: 10px 20px;
+                align-items: center;
+                flex-direction: column;
+                text-align: center;
+                gap: 10px;
+            }
+            .copy{
+                @include mobile{
+                    font-size: 13px;
+                }
+            }
+            .terms{
+                text-decoration: underline;
+                @include mobile{
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+}

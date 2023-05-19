@@ -1,0 +1,87 @@
+.blind{
+    width: 1px; height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    position: absolute;
+}
+
+// .headline
+.headline{
+    font-family:'Dahlia';
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 75px;
+    line-height: 90px;
+    font-weight: 600;
+    @include tablet{
+        font-size: 60px;
+        line-height:75px;
+    }
+    @include mobile{
+        font-size: 40px;
+        line-height:65px;
+    }
+}
+
+// .link-more
+.link-more{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 200px;
+    margin-top: 30px;
+    padding: 13px 35px;
+    color: #fff;
+    font-size: 16px;
+    border-radius: 150px;
+    background-color: #A6367E;
+    @include mobile{
+        width: 140px;
+        padding: 15px;
+        font-size: 14px;
+        margin: 30px auto 0;
+    }
+}
+.link-more .ic-arrow{
+    background: #fff;
+    width: 2.5vw;
+    height: 2.5vw;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include mobile{
+        width: 14px;
+        height: 14px;
+        padding: 2px;
+    }
+}
+.link-more .ic-arrow .svg{
+    width: 22px;
+    height: 22px;
+}
+.link-more .ic-arrow .path{
+    fill: #A6367E;
+}
+
+// .cursor
+.cursor{
+    position: fixed;
+    top: 0;left: 0;
+    width: 50px;
+    height: 50px;
+    background: #A6367E;
+    border-radius: 100%;
+    z-index: 10;
+    pointer-events: none;
+    /* 외형은 보이되 선택되지않게 */
+    @include mobile{
+        display: none;
+    }
+}
+.cursor-grow{
+    transform: scale(2);
+    mix-blend-mode: difference;
+}
